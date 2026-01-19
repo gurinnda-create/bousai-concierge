@@ -115,22 +115,30 @@ export default function ResultView({ items, input, onRestart }: Props) {
                                     </div>
 
                                     {/* Shop Links */}
-                                    <div className="mt-4 flex gap-2">
+                                    <div className="mt-4 flex flex-wrap gap-2">
                                         <a
                                             href={`https://www.amazon.co.jp/s?k=${encodeURIComponent(item.name)}&tag=giftconcierge-22`}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="flex-1 py-2 bg-[#FF9900] text-white text-center text-sm font-bold rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-1"
+                                            className="flex-1 min-w-[70px] py-2 bg-[#FF9900] text-white text-center text-xs font-bold rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-1"
                                         >
-                                            Amazon <ExternalLink size={12} />
+                                            Amazon <ExternalLink size={10} />
                                         </a>
                                         <a
                                             href={`https://hb.afl.rakuten.co.jp/hgc/5026c068.716cbf0d.5026b962.3c6c4724/?pc=${encodeURIComponent(`https://search.rakuten.co.jp/search/mall/${item.name}`)}`}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="flex-1 py-2 bg-[#BF0000] text-white text-center text-sm font-bold rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-1"
+                                            className="flex-1 min-w-[70px] py-2 bg-[#BF0000] text-white text-center text-xs font-bold rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-1"
                                         >
-                                            楽天 <ExternalLink size={12} />
+                                            楽天 <ExternalLink size={10} />
+                                        </a>
+                                        <a
+                                            href={`https://shopping.yahoo.co.jp/search?p=${encodeURIComponent(item.name)}`}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex-1 min-w-[70px] py-2 bg-[#FF0033] text-white text-center text-xs font-bold rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-1"
+                                        >
+                                            Yahoo! <ExternalLink size={10} />
                                         </a>
                                     </div>
                                 </div>
