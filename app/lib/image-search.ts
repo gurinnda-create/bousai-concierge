@@ -8,7 +8,7 @@ export async function searchGoogleImages(query: string): Promise<string | null> 
 
     try {
         const controller = new AbortController();
-        const timeoutId = setTimeout(() => controller.abort(), 2000);
+        const timeoutId = setTimeout(() => controller.abort(), 5000); // 5 second timeout
 
         const searchQuery = `${query} site:amazon.co.jp`;
         const url = `https://www.googleapis.com/customsearch/v1?q=${encodeURIComponent(searchQuery)}&cx=${cx}&searchType=image&key=${apiKey}&num=1&safe=active`;
